@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    @Bean
-    public PaymentService stripe() {
-        return new StripePaymentService();
-    }
+//    @Bean
+//    public PaymentService stripe() {
+//        return new StripePaymentService();
+//    }
 
 
 }
