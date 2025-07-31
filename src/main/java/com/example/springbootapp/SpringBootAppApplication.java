@@ -1,5 +1,6 @@
 package com.example.springbootapp;
 
+import com.example.springbootapp.entities.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -9,19 +10,11 @@ public class SpringBootAppApplication {
 
     public static void main(String[] args) {
 
-        //SpringApplication.run(SpringBootAppApplication.class, args);
-//        var OrderService = new OrderService();
-//        OrderService.placeOrder();
-        //PaymentService paymentService = null
-         ApplicationContext context=SpringApplication.run(SpringBootAppApplication.class, args);
-        //var orderService= context.getBean(OrderService.class);
-        //OrderService orderService = new OrderService(new PayPalPaymentService());
-       // orderService.setPaymentService(new PayPalPaymentService());
-//        var OrderService = new OrderService(new PayPalPaymentService());
-//        orderService.placeOrder();
-       var manager = context.getBean(OrderService.class);
-       manager.placeOrder();
-
+        User user = User.builder()
+                .name("raj")
+                .password("password")
+                .email("raj@gmail.com")
+                .build();
     }
 
 }
